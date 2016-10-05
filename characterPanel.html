@@ -5,6 +5,9 @@
     <meta name="keywords" content="Gw, playercommunity, api access, gw2 api, guild wars, player, character, achievements, guild">
     <meta name="description" content="Panel with the informnation of every character of the account">
     <meta name="author" content="Martin Rubio">
+
+    <link type="text/css" rel="stylesheet" href="css/main.css"/>
+
     <title>Characters</title>
   </head>
 
@@ -14,35 +17,33 @@
       <ul>
         <li><a href="characterPanel.html">Characters</a></li>
         <li><a href="achivementsPanel.html">Achivements</a></li>
-        <li>Guild
-          <ul><!-- List of Guilds of the acount (D)-->
-            <li><a href="guild/guildMembersPanel.html">Guild1</a></li>
-            <li>Guild2</li>
-            <li>Guild3</li>
-          </ul>
+        <li class="dropBtn">Guild
+          <div class="dropContent">
+            <a href="guild/guildMembersPanel.html">Guild1</a>
+            <a href="guild/guildMembersPanel.html">Guild2</a>
+            <a href="guild/guildMembersPanel.html">Guild3</a>
+          </div>
         </li>
       </ul>
-
     </nav>
 
-
-    <aside><!-- List of characters  (D)-->
-      <ul>
-        <li>
-          <img src="imgs/profesions/engineer.png">
-          <a href="characters/char1.html">Character 1.</a>
-        </li>
-        <li>
-          <img src="imgs/profesions/thief.png">
-          <a href="characters/char2.html">Character 2.</a>
-        </li>
-        <li>
-          <img src="imgs/profesions/warrior.png">
-          <a href="characters/char3.html">Character 3.</a>
-        </li>
-      </ul>
-    </aside>
-
-
+    <section class="main">
+      <aside><!-- List of characters  (D)-->
+        <ul>
+          <li>
+            <img width="40px" src="imgs/profesions/engineer.png">
+            <a href="characters/char1.html">Character 1.</a>
+          </li>
+          <li>
+            <img width="40px" src="imgs/profesions/thief.png">
+            <a href="characters/char2.html">Character 2.</a>
+          </li>
+          <li>
+            <img width="40px" src="imgs/profesions/warrior.png">
+            <a href="characters/char3.html">Character 3.</a>
+          </li>
+        </ul>
+      </aside>
+    </section>
   </body>
 </html>
