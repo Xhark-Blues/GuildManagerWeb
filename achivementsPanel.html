@@ -5,6 +5,9 @@
     <meta name="keywords" content="Gw, playercommunity, api access, gw2 api, guild wars, player, character, achievements, guild">
     <meta name="description" content="Panel with diferent information about acchievements of the acount">
     <meta name="author" content="Martin Rubio">
+
+    <link type="text/css" rel="stylesheet" href="css/main.css"/>
+
     <title>Achievements</title>
   </head>
 
@@ -14,64 +17,66 @@
       <ul>
         <li><a href="characterPanel.html">Characters</a></li>
         <li><a href="achivementsPanel.html">Achivements</a></li>
-        <li>Guild
-          <ul><!-- List of Guilds of the acount (D)-->
-            <li><a href="guild/guildMembersPanel.html">Guild1</a></li>
-            <li>Guild2</li>
-            <li>Guild3</li>
-          </ul>
+        <li class="dropBtn">Guild
+          <div class="dropContent">
+            <a href="guild/guildMembersPanel.html">Guild1</a>
+            <a href="guild/guildMembersPanel.html">Guild2</a>
+            <a href="guild/guildMembersPanel.html">Guild3</a>
+          </div>
         </li>
       </ul>
     </nav>
 
-
+  <section class="main">
     <aside><!-- List of Most recent Achievemts  (D)-->
       <h2>Summary</h2>
       <ul>
         <li>
-          <img src="imgs/achivements/rising_flames.png"><a href="https://wiki.guildwars2.com/wiki/Rising_Flames_(achievements)" target="_blank">Cami's Final Voyage</a>
+          <img width="40px" src="imgs/achivements/rising_flames.png"><a href="https://wiki.guildwars2.com/wiki/Rising_Flames_(achievements)" target="_blank">Cami's Final Voyage</a>
         </li>
         <li>
-          <img src="imgs/achivements/explorer.png"><a href="https://wiki.guildwars2.com/wiki/Explorer" target="_blank">Orr Explorer</a>
+          <img width="40px" src="imgs/achivements/explorer.png"><a href="https://wiki.guildwars2.com/wiki/Explorer" target="_blank">Orr Explorer</a>
         </li>
         <li>
-          <img src="imgs/achivements/daily_fractals.png"><a href="https://wiki.guildwars2.com/wiki/Daily_Fractals" target="_blank">Daily Tier 4 Uncategorized </a>
+          <img width="40px" src="imgs/achivements/daily_fractals.png"><a href="https://wiki.guildwars2.com/wiki/Daily_Fractals" target="_blank">Daily Tier 4 Uncategorized </a>
         </li>
       </ul>
     </aside>
-
-    <section><!-- Tracked Achievement (D) -->
-      <h2>Watch List</h2>
-      <ol>
-        <li>
-          <img src="imgs/achivements/tangled_depths.png"><a href="">Friend of the Frogs</a>
-          <ul>
-            <li>
-              -Defend Beatle Larvae
-            </li>
-            <li>
-              -Protect Beatle Hatchling
-            </li>
-          </ul>
-        </li>
-        <li>
-          <img src="imgs/achivements/fractals.png"><a href="">Head Hunter</a>
-          <ul>
-            <li>
-              -Defeat the Legendary Archdiviner at the top of the Cliffside fractal while
-              only killing five cultists or chanters. This does not include the initial
-              entourage. Must be completed on scale 21 or above.
-            </li>
-          </ul>
-        </li>
-        <li>
-          <img src="imgs/achivements/rising_flames.png"><a href="">Token Collector</a>
-        </li>
-      </ol>
+    <section class="content">
+      <section class="tracking"><!-- Tracked Achievement (D) -->
+        <h2>Watch List</h2>
+        <ol>
+          <li>
+            <div class="imgTitle"><img width="40px" src="imgs/achivements/tangled_depths.png"><a href="">Friend of the Frogs</a></div>
+            <ul>
+              <li>
+                -Defend Beatle Larvae
+              </li>
+              <li>
+                -Protect Beatle Hatchling
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div class="imgTitle"><img width="40px" src="imgs/achivements/fractals.png"><a href="">Head Hunter</a></div>
+            <ul>
+              <li>
+                -Defeat the Legendary Archdiviner at the top of the Cliffside fractal while
+                only killing five cultists or chanters. This does not include the initial
+                entourage. Must be completed on scale 21 or above.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div class="imgTitle"><img width="40px" src="imgs/achivements/rising_flames.png"><a href="">Token Collector</a></div>
+          </li>
+        </ol>
+      </section>
+      <section class="finder"><!--  Achivement finder (D) -->
+        <h2>Finder</h2>
+        <a href="progress.html"><img src="imgs/searchIMG.png"></a>
+      </section>
     </section>
-    <section><!--  Achivement finder (D) -->
-      <h2>Finder</h2>
-      <a href="progress.html"><img src="imgs/searchIMG.png"></a>
-    </section>
+  </section>
   </body>
 </html>

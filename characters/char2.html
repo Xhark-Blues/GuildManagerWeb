@@ -5,6 +5,9 @@
     <meta name="keywords" content="Gw, playercommunity, api access, gw2 api, guild wars, player, character, achievements, guild">
     <meta name="description" content="Information about one of the characters of an account">
     <meta name="author" content="Martin Rubio">
+
+    <link type="text/css" rel="stylesheet" href="../css/main.css"/>
+
     <title>Character 2</title>
   </head>
 
@@ -14,95 +17,95 @@
       <ul>
         <li><a href="../characterPanel.html">Characters</a></li>
         <li><a href="../achivementsPanel.html">Achivements</a></li>
-        <li>Guild
-          <ul><!-- List of Guilds of the acount (D)-->
-            <li><a href="../guild/guildMembersPanel.html">Guild1</a></li>
-            <li>Guild2</li>
-            <li>Guild3</li>
-          </ul>
+        <li class="dropBtn">Guild
+          <div class="dropContent">
+            <a href="guild/guildMembersPanel.html">Guild1</a>
+            <a href="guild/guildMembersPanel.html">Guild2</a>
+            <a href="guild/guildMembersPanel.html">Guild3</a>
+          </div>
         </li>
       </ul>
-
     </nav>
 
+  <section class="main">
+      <aside><!-- List of characters  (D)-->
+        <ul>
+          <li>
+            <img width="40px" src="../imgs/profesions/engineer.png">
+            <a href="char1.html">Character 1.</a>
+          </li>
+          <li>
+            <img width="40px" src="../imgs/profesions/thief.png">
+            <a href="char2.html">Character 2.</a>
+          </li>
+          <li>
+            <img width="40px" src="../imgs/profesions/warrior.png">
+            <a href="char3.html">Character 3.</a>
+          </li>
+        </ul>
+      </aside>
 
-    <aside><!-- List of characters  (D)-->
-      <ul>
-        <li>
-          <img src="../imgs/profesions/engineer.png">
-          <a href="char1.html">Character 1.</a>
-        </li>
-        <li>
-          <img src="../imgs/profesions/thief.png">
-          <a href="char2.html">Character 2.</a>
-        </li>
-        <li>
-          <img src="../imgs/profesions/warrior.png">
-          <a href="../progress.html">Character 3.</a>
-        </li>
-      </ul>
-    </aside>
 
-
-    <section><!-- Character Resume (D) -->
-      <h2>Character 2</h2>
-      <article><!-- Equipement-->
-        <img src="../imgs/equipment/head.png">
-        <img src="../imgs/equipment/shoulder.png">
-        <img src="../imgs/equipment/chest.png">
-        <img src="../imgs/equipment/hand.png">
-        <img src="../imgs/equipment/leg.png">
-        <img src="../imgs/equipment/feet.png">
-      </article>
-      <article><!-- Stats -->
-        <h3>Stats</h3>
-          <ul><!-- Main Stats -->
+      <section class="content"><!-- Character Resume (D) -->
+        <h2>Character 2</h2>
+        <article class="equipement"><!-- Equipement-->
+          <img src="../imgs/equipment/head.png">
+          <img src="../imgs/equipment/shoulder.png">
+          <img src="../imgs/equipment/chest.png">
+          <img src="../imgs/equipment/hand.png">
+          <img src="../imgs/equipment/leg.png">
+          <img src="../imgs/equipment/feet.png">
+        </article>
+        <article class="stats"><!-- Stats -->
+          <h3>Stats</h3>
+          <ul class="primary"><!-- Main Stats -->
             <li>
-              <img src="../imgs/stats/power.png">Power:2693
+              <div class="stat"><img src="../imgs/stats/power.png"><span class="key">Power:</span><span class="valor">2116</span></div>
             </li>
             <li>
-              <img src="../imgs/stats/precision.png">Precision:2074
+              <div class="stat"><img src="../imgs/stats/precision.png"><span class="key">Precision:</span><span class="valor">1712</span></div>
             </li>
             <li>
-              <img src="../imgs/stats/ferocity.png">Ferocity:1082
+              <div class="stat"><img src="../imgs/stats/ferocity.png"><span class="key">Ferocity:</span><span class="valor">0</span></div>
             </li>
             <li>
-              <img src="../imgs/stats/toughness.png">Toughness:1000
+              <div class="stat"><img src="../imgs/stats/toughness.png"><span class="key">Toughness:</span><span class="valor">0</span></div>
             </li>
             <li>
-              <img src="../imgs/stats/vitality.png">Vitality:1113
+              <div class="stat"><img src="../imgs/stats/vitality.png"><span class="key">Vitality:</span><span class="valor">1000</span></div>
             </li>
           </ul>
-          <ul><!-- Secundari Stats -->
+          <ul class="secundary"><!-- Secundari Stats -->
             <li>
-              <img src="../imgs/stats/armor.png">Armor:2113
+                <div class="stat"><img src="../imgs/stats/armor.png"><span class="key">Armor:</span><span class="valor">2118</span></div>
             </li>
             <li>
-              <img src="../imgs/stats/boon_duration.png">Concentration:0
+                <div class="stat"><img src="../imgs/stats/boon_duration.png"><span class="key">Concentration:</span><span class="valor">0</span></div>
             </li>
             <li>
-              <img src="../imgs/stats/condition_damage.png">Condition Damage:0
+                <div class="stat"><img src="../imgs/stats/condition_damage.png"><span class="key">Cond. Damage:</span><span class="valor">1229</span></div>
             </li>
             <li>
-              <img src="../imgs/stats/condition_duration.png">Expertise:0
+                <div class="stat"><img src="../imgs/stats/condition_duration.png"><span class="key">Expertise:</span><span class="valor">479</span></div>
             </li>
             <li>
-              <img src="../imgs/stats/healing_power.png">Heling Power:0
+                <div class="stat"><img src="../imgs/stats/healing_power.png"><span class="key">Heling Power:</span><span class="valor">0</span></div>
             </li>
           </ul>
-      </article>
-      <article><!-- Accesories -->
-        <section>
-          <img src="../imgs/equipment/back.png">
-          <img src="../imgs/equipment/trinket1.png">
-          <img src="../imgs/equipment/trinket2.png">
-        </section>
-        <section>
-          <img src="../imgs/equipment/amulet.png">
-          <img src="../imgs/equipment/leftRing.png">
-          <img src="../imgs/equipment/rightRing.png">
-        </section>
-      </article>
+        </article>
+        <article class="accesories"><!-- Accesories -->
+          <section>
+            <img src="../imgs/equipment/back.png">
+            <img src="../imgs/equipment/trinket1.png">
+            <img src="../imgs/equipment/trinket2.png">
+          </section>
+          <section>
+            <img src="../imgs/equipment/amulet.png">
+            <img src="../imgs/equipment/leftRing.png">
+            <img src="../imgs/equipment/rightRing.png">
+          </section>
+        </article>
+      </section>
     </section>
   </body>
 </html>

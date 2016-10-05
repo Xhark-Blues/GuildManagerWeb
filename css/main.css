@@ -28,6 +28,13 @@ ul {
   border: 1px solid black;
 }
 
+.imgTitle {
+  border: 1px solid black;
+}
+
+.imgTitle img{
+  vertical-align:middle;
+}
 /* END */
 
 /*  Navegation Bar */
@@ -48,10 +55,11 @@ nav li {
   }
 
   .dropContent a{
-    display: block;
+    display: line;
   }
 
   .dropBtn:hover .dropContent{
+    border: 1px solid black;
     display: block;
   }
 
@@ -78,7 +86,7 @@ nav li {
 
   /* Character sumarry resume*/
 
-  section.char{
+  section.content{
     border: 1px solid black;
     width: 70%;
     float: right;;
@@ -98,8 +106,8 @@ nav li {
     border: 1px solid black;
     float:right;
     clear:right;
-    padding: 5px 10px;
-    width: 70%;
+    padding: 0px 10px;
+    width: %;
   }
   .stat{
     float: left;
@@ -138,3 +146,23 @@ nav li {
 
 
   /* END Character sumarry resume*/
+
+  /*  Achievement page */
+
+  .tracking {
+    float:left;
+  }
+
+  .tracking ol {
+    padding-left: 0px;
+    border: 1px solid black;
+  }
+
+  .finder {
+    margin: 5px 0px;
+    border: 1px solid black;
+    float:left;
+    width: auto;
+  }
+
+  /* END Achievement page */
