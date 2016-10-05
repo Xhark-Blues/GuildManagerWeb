@@ -55,7 +55,7 @@ nav li {
   }
 
   .dropContent a{
-    display: line;
+    display: block;
   }
 
   .dropBtn:hover .dropContent{
