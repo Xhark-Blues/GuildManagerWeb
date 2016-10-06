@@ -33,8 +33,7 @@
       vertical-align:middle;
     }
 
-  /* END */
-/*dfafaasdsdf*/
+
   /*  Navegation Bar */
     nav {
       width: inherit;
@@ -61,9 +60,7 @@
       display: block;
     }
 
-  /* END  Navigation Bar*/
 
-  /* Character list Aside */
     aside {
       border: 1px solid black;
       width: 20%;
@@ -79,75 +76,9 @@
       vertical-align:middle;
     }
 
-  /* END Character list Aside */
-
-  /* Character sumarry resume*/
-
     section.content{
       border: 1px solid black;
       width: 70%;
       float: right;;
       padding: 10px;
     }
-    .equipement {
-      margin-left: 20px;
-      border: 1px solid black;
-      float: left;
-    }
-    .equipement img{
-      display: block;
-      vertical-align:middle;
-    }
-    .stats{
-      border: 1px solid black;
-      float:right;
-      clear:right;
-      padding: 0px 10px;
-    }
-    .stat{
-      float: left;
-      width: 100%;
-      margin: 2px 0px;
-    }
-    .stat img{
-      float:left;
-    }
-    .stats .primary{
-      width: 48%;
-      float: left;
-    }
-    .stats .secundary {
-      width: 48%;
-      float: right;
-    }
-    .key {
-    }
-    .valor {
-      float: right;
-    }
-    .accesories {
-      margin-top: 50px;
-      margin-right: 50px;
-      float: right;
-      clear:right;
-    }
-
-  /* END Character sumarry resume*/
-
-  /*  Achievement page */
-
-    .tracking {
-      float:left;
-    }
-    .tracking ol {
-      padding-left: 0px;
-      border: 1px solid black;
-    }
-    .finder {
-      margin: 5px 0px;
-      border: 1px solid black;
-      float:left;
-      width: auto;
-    }
-
-  /* END Achievement page */

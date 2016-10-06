@@ -1,0 +1,44 @@
+
+/* Character sumary*/
+.equipement {
+  margin-left: 20px;
+  border: 1px solid black;
+  float: left;
+}
+.equipement img{
+  display: block;
+  vertical-align:middle;
+}
+.stats{
+  border: 1px solid black;
+  float:right;
+  clear:right;
+  padding: 0px 10px;
+}
+.stat{
+  float: left;
+  width: 100%;
+  margin: 2px 0px;
+}
+.stat img{
+  float:left;
+}
+.stats .primary{
+  width: 48%;
+  float: left;
+}
+.stats .secundary {
+  width: 48%;
+  float: right;
+}
+.key {
+}
+.valor {
+  float: right;
+}
+.accesories {
+  margin-top: 50px;
+  margin-right: 50px;
+  float: right;
+  clear:right;
+}

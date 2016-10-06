@@ -1,0 +1,14 @@
+
+.tracking {
+  float:left;
+}
+.tracking ol {
+  padding-left: 0px;
+  border: 1px solid black;
+}
+.finder {
+  margin: 5px 0px;
+  border: 1px solid black;
+  float:left;
+  width: auto;
+}
