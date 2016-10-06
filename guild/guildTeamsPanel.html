@@ -5,6 +5,9 @@
     <meta name="keywords" content="Gw, playercommunity, api access, gw2 api, guild wars, player, character, achievements, guild">
     <meta name="description" content="Page with information of the teams organized in categories that the administrator of a guild may have set">
     <meta name="author" content="Martin Rubio">
+
+    <link type="text/css" rel="stylesheet" href="../css/main.css"/>
+
     <title>Guild Teams</title>
   </head>
 
@@ -14,12 +17,12 @@
       <ul>
         <li><a href="../characterPanel.html">Characters</a></li>
         <li><a href="../achivementsPanel.html">Achivements</a></li>
-        <li>Guild
-          <ul><!-- List of Guilds of the acount (D)-->
-            <li><a href="guildMembersPanel.html">Guild1</a></li>
-            <li>Guild2</li>
-            <li>Guild3</li>
-          </ul>
+        <li class="dropBtn">Guild
+          <div class="dropContent">
+            <a href="../guild/guildMembersPanel.html">Guild1</a>
+            <a href="../guild/guildMembersPanel.html">Guild2</a>
+            <a href="../guild/guildMembersPanel.html">Guild3</a>
+          </div>
         </li>
       </ul>
       <ul><!-- Sub panels -->
@@ -28,7 +31,8 @@
         <li><a href="guildBankPanel.html">Bank</a></li>
       </ul>
     </nav>
-    <section><!-- Character Resume (D) -->
+
+    <section class="main"><!-- Character Resume (D) -->
       <h2>Teams</h2>
       <ul>
         <li><ul><h3>PvE</h3>

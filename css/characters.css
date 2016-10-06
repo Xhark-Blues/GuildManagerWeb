@@ -13,6 +13,8 @@
   border: 1px solid black;
   float:right;
   clear:right;
+  width: 65%;
+  margin-right: 5px;
   padding: 0px 10px;
 }
 .stat{

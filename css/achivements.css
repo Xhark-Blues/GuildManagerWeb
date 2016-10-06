@@ -1,14 +1,28 @@
 
 .tracking {
-  float:left;
+  float:right;
+  height: 65%;
+  width: 98%;
+  margin: 1%;
+  border: 1px solid black;
+  margin-bottom: 20px;
+  overflow: auto;
 }
 .tracking ol {
-  padding-left: 0px;
+  padding: 5px;
   border: 1px solid black;
+  margin: 5px;
+}
+.tracking ul {
+  margin: 5px;
+}
+.tracking ol li{
+  margin-bottom: 5px;
 }
 .finder {
-  margin: 5px 0px;
   border: 1px solid black;
-  float:left;
-  width: auto;
+  margin: 1%;
+  height: 20%;
+  width: 98%;
+  float: left;
 }
