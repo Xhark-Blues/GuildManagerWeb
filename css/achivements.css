@@ -1,10 +1,10 @@
 
 .tracking {
-  float:right;
-  height: 65%;
-  width: 98%;
-  margin: 1%;
   border: 1px solid black;
+  height: 65%;
+  width: calc(100% - 10px);
+  margin: 5px;
+  float:right;
   margin-bottom: 20px;
   overflow: auto;
 }
@@ -21,8 +21,9 @@
 }
 .finder {
   border: 1px solid black;
-  margin: 1%;
-  height: 20%;
-  width: 98%;
-  float: left;
+  height: 25%;
+  margin: 5px;
+  width: calc(100% - 10px);
+  float: right;
+  overflow: auto;
 }

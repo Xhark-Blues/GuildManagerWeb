@@ -1,0 +1,9 @@
+html {
+  text-align: center;
+}
+body {
+  color: black;
+  margin-top: 10%;
+  border: 1px solid black;
+  display: inline-block;
+}
