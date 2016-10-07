@@ -1,0 +1,36 @@
+
+h3 {
+  display: inline;
+}
+
+
+.table {
+  border: 1px solid black;
+  float:left;
+  width: 100%;
+}
+.row{
+  border: 1px solid black;
+  margin: 5px;
+  width: calc(100% - 10px);
+  float:left;
+  clear: both;
+}
+.name, .points, .date{
+  display:inline;
+  text-align: center;
+  margin: 5px;
+}
+.name {
+  float:left;
+  width: 30%;
+  border: 1px solid black;
+}
+.points {
+  float:left;
+  width: 40%;
+}
+.date {
+  float:right;
+  width: 20%;
+}
