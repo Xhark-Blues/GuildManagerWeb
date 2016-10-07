@@ -1,0 +1,13 @@
+.categories, .categorie, .teams, .team, .role {
+  border: 1px solid black;
+  margin: 5px;
+}
+
+.member {
+  margin: 5px;
+}
+
+h4{
+  border-bottom: 1px solid black;
+  padding: 5px;
+}
