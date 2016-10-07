@@ -3,7 +3,16 @@ h3 {
   display: inline;
 }
 
-
+.head {
+  border: 1px solid black;
+  margin: 5px;
+  width: calc(100% - 10px);
+  float:left;
+  clear: both;
+}
+.head .name{
+  border: 0px;
+}
 .table {
   border: 1px solid black;
   float:left;
