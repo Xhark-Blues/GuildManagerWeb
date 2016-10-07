@@ -1,0 +1,47 @@
+
+.bank {
+  border: 1px solid black;
+  float: left;
+}
+
+.tracker {
+  border: 1px solid black;
+  float: right;
+  width: 40%;
+}
+.tracker ul{
+  float:left;
+}
+.tracker ul li {
+  border: 1px solid black;
+  margin: 5px;
+  float: left;
+}
+
+.obj img{
+  vertical-align: middle;
+}
+.description{
+  text-align: justify;
+  margin: 5px 10px;
+  margin-right: 2px;
+}
+.needs{
+  float: left;
+}
+.requr {
+  float: left;
+  width: 65px;
+  margin: 5px;
+  text-align: center;
+
+}
+.requr span {
+  width: 100%;
+    display: block;
+}
+.add{
+  border: 1px solid black;
+  float: right;
+  margin: 5px;
+}
