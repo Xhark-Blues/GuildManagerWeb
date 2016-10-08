@@ -3,7 +3,6 @@
   border: 1px solid black;
   float: left;
 }
-
 .tracker {
   border: 1px solid black;
   float: right;
@@ -17,7 +16,6 @@
   margin: 5px;
   float: left;
 }
-
 .obj img{
   vertical-align: middle;
 }
@@ -34,11 +32,10 @@
   width: 65px;
   margin: 5px;
   text-align: center;
-
 }
 .requr span {
   width: 100%;
-    display: block;
+  display: block;
 }
 .add{
   border: 1px solid black;
