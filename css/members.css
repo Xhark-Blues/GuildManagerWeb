@@ -11,14 +11,15 @@ h2 {
   width: calc(100% - 10px);
   float:left;
   clear: both;
+  color: #D4A96A;
 }
 .head .name{
   border: 0px;
 }
 .table {
   border: 1px solid black;
-  flex: 0 0 100%;
-  width: 100%;
+  flex: 0 0 calc(100% - 10px);
+  margin: 5px;
 }
 .row{
   border: 1px solid black;
