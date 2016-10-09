@@ -8,13 +8,15 @@
       background-image: url("../imgs/background.jpg");
       background-repeat: no-repeat;
       background-size: 100%;
+      background-color: rgb(125, 125, 125);
     }
 
     body {
       color: #aa7f39;
-      width: 50%;
+      width: 55%;
       min-width: 800px;
       margin-left: auto;
+      margin-top: 120px;
       margin-right: auto;
       overflow: auto;
 
@@ -51,12 +53,29 @@
       padding: 0px;
       margin: 0px;
     }
+    header {
+      background-image: url("../imgs/leatherCtn.png");
+      border: 1px solid #ffecb3;
+      width: calc(100% - 10px);
+      padding: 5px;
+      display: inline-flex;
+      justify-content:space-between;
+      margin: 20px 0px;
+    }
+    header h1 {
+      margin: auto;
+    }
+    .iconCTN {
+      display: inline-flex;
+      flex-direction: column-reverse;
+    }
     .main{
       width: 100%;
       padding: 0px;
       display: inline-flex;
       justify-content:space-between;
       flex-wrap: wrap;
+      background-image: url("../imgs/leather.png");
       border: 1px solid #ffecb3;
       background-color: #AA7C39;
     }
@@ -87,6 +106,7 @@
       border-bottom: 0px;
       margin-bottom: 5px;
       background-color: #AA7C39;
+      background-image: url("../imgs/leather.png");
     }
     nav ul{
       border-bottom: 1px solid #ffecb3;
@@ -134,7 +154,7 @@
       border: 1px solid #ffecb3;
       width: calc(30% - 30px);
       height: 100%;
-      margin: 5px 5px 0px 10px;
+      margin: 5px 5px 5px 10px;
       float:left;
       background-color: 805415;
     }
@@ -163,7 +183,8 @@
     }
 
     .content {
-      background-color: 805415;
+      border: 1px solid #ffecb3;
+      background-image: url("../imgs/leatherCtn.png");
     }
 
 
