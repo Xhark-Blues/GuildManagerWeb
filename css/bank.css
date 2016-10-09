@@ -1,10 +1,10 @@
 
 .bank {
-  border: 1px solid black;
+  border: 1px solid #ffecb3;
   float: left;
 }
 .tracker {
-  border: 1px solid black;
+  border: 1px solid #ffecb3;
   float: right;
   width: 40%;
 }
@@ -12,7 +12,7 @@
   float:left;
 }
 .tracker ul li {
-  border: 1px solid black;
+  border: 1px solid #ffecb3;
   margin: 5px;
   float: left;
 }
@@ -38,7 +38,7 @@
   display: block;
 }
 .add{
-  border: 1px solid black;
+  border: 1px solid #ffecb3;
   float: right;
   margin: 5px;
 }

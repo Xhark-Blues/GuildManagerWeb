@@ -1,7 +1,22 @@
 
 .categories, .categorie, .teams, .team, .role {
-  border: 1px solid black;
+  border: 1px solid #ffecb3;
   margin: 5px;
+}
+.teams {
+  border: 0px;
+}
+.categorie{
+  background-color: #ffecb3;
+}
+
+li {
+  padding-left: 5px;
+}
+.categorie a{
+  color: #805715;
+  margin: 5px;
+  margin-left: 10px;
 }
 .member {
   margin: 5px;
@@ -15,4 +30,7 @@ h4{
 }
 h2 {
   flex-basis: 100%;
+}
+.text {
+  border: 1px solid white;
 }
