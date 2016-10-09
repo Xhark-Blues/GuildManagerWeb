@@ -1,6 +1,9 @@
 
 /* Character sumary*/
 
+.content h2 {
+  margin-bottom: 20px;
+}
 .equipement {
   margin-left: 20px;
   border: 1px solid black;

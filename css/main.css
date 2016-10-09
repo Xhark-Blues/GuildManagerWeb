@@ -1,19 +1,34 @@
 
   /*   Main   */
-  
+
+    html {
+      width: 100%;
+      height: 100%;
+    }
     body {
-      color: black;
-      width: 900px;
+      color: #ffecb3;
+      width: 50%;
+      min-width: 800px;
       margin-left: auto;
       margin-right: auto;
-      border: 1px solid black;
       overflow: auto;
+
+      background-image: url("../imgs/background.jpg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+
+      font-family: PT Sans, Helvetica, Tahoma;
+
     }
     h1, h2, h3, h4, h5 {
       margin: 0px;
+      font-family: GT Walsheim;
+    }
+    h2 {
+      color: white;
     }
     a {
-      color: black;
+      color: #ffecb3;
       text-decoration: none;
     }
     li{
@@ -28,8 +43,11 @@
     .main{
       width: 100%;
       padding: 0px;
-      float: left;
+      display: inline-flex;
+      justify-content:space-between;
+      flex-wrap: wrap;
       border: 1px solid black;
+      background-color: rgba(0, 0, 0, 0.2);
     }
     .imgTitle {
       border: 1px solid black;
@@ -78,9 +96,9 @@
 
     aside {
       border: 1px solid black;
-      width: 25%;
+      width: calc(30% - 30px);
       height: 100%;
-      margin: 5px auto;
+      margin: 5px 5px 0px 10px;
       float:left;
     }
     aside h2 {
@@ -92,6 +110,7 @@
       overflow: hidden;
     }
     aside li a{
+
     }
     aside li img{
       vertical-align: middle;
