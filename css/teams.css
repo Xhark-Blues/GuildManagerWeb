@@ -6,6 +6,14 @@
 .teams {
   border: 0px;
 }
+
+.dropable {
+  display: none;
+}
+
+.team ul.show {
+  display: block;
+}
 .categorie{
   background-color: #ffecb3;
 }
