@@ -13,20 +13,16 @@
 
     <script src="angular/guildManager.js"></script>
     <script src="angular/controllers/CharController.js"></script>
-    
+
     <title>Login</title>
     </head>
 
   <body ng-app="characters">
 
-    <script src="angular/guildManager.js"></script>
-    <script src="angular/controllers/CharController.js"></script>
 
     <a href="characterPanel.html">
-    <img src="imgs/loginIMG.png">
+      <img src="imgs/loginIMG.png">
     </a>
-    <meta name="keywords" content="">
-    <meta name="description" content="">
     <div class="buttons">
       <a href="progress.html">Sing up</a>
       <a href="characterPanel.html">Sing in</a>
@@ -36,6 +32,10 @@
       <p ng-init="getChars()">{{ chars }}</p>
       <p ng-init="getChar('Tinmark')">{{ char.profession }}</p>
     </div>
+
+    <script src="angular/guildManager.js"></script>
+    <script src="angular/controllers/CharController.js"></script>
+
   </body>
 
 </html>

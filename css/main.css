@@ -174,18 +174,15 @@
     aside li img{
       vertical-align: middle;
     }
-    section.content{
+    .content{
       border: 1px solid #ffecb3;
       width: 70%;
       height: 500px;
       float: right;
       margin: 5px;
-    }
-
-    .content {
-      border: 1px solid #ffecb3;
       background-image: url("../imgs/leatherCtn.png");
     }
+
 
 
     .text{

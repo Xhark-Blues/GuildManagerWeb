@@ -23,7 +23,7 @@
         <div class="iconCTN">
           <div class="icons">
             <a href="https://github.com/Xhark-Blues/GuildManagerWeb"><img src="imgs/github.png"></a>
-              <a href="https://github.com/Xhark-Blues/GuildManagerWeb"><img src="imgs/gw2.png"></a>
+            <a href="https://github.com/Xhark-Blues/GuildManagerWeb"><img src="imgs/gw2.png"></a>
           </div>
         </div>
     </header>
@@ -41,26 +41,21 @@
       </ul>
     </nav>
 
-    <section class="main">
+    <section class="main" ng-controller="CharController" ng-init="getChars()">
       <aside><!-- List of characters  (D)-->
         <h2>Characters</h2>
-        <ul>
-          <li>
-            <img width="40px" src="imgs/profesions/engineer.png">
-            <a href="#char1">Character 1.</a>
-          </li>
-          <li>
-            <img width="40px" src="imgs/profesions/thief.png">
-            <a href="#char1">Character 2.</a>
-          </li>
-          <li>
-            <img width="40px" src="imgs/profesions/warrior.png">
-            <a href="#char1">Character 3.</a>
+        <ul >
+          <li ng-repeat="x in chars" >
+            <img width="40px" ng-src="imgs/profesions/{{ x }}.png">
+            <a href="#char1">{{ x }}</a>
           </li>
         </ul>
       </aside>
 
-      <div class="ng-view"></div>
+      <div class="content ng-view"></div>
     </section>
+
+    <script src="angular/guildManager.js"></script>
+    <script src="angular/controllers/CharController.js"></script>
   </body>
 </html>
