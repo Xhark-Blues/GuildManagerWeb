@@ -41,13 +41,13 @@
       </ul>
     </nav>
 
-    <section class="main" ng-controller="CharController" ng-init="getChars()">
+    <section class="main" ng-controller="CharController">
       <aside><!-- List of characters  (D)-->
         <h2>Characters</h2>
         <ul >
           <li ng-repeat="x in chars" >
-            <img width="40px" ng-src="imgs/profesions/{{ x }}.png">
-            <a href="#char1">{{ x }}</a>
+            <img width="40px" ng-src="imgs/profesions/{{ x.profession.toLowerCase() }}.png">
+            <a href="#char1">{{ x.name }}</a>
           </li>
         </ul>
       </aside>
@@ -55,7 +55,8 @@
       <div class="content ng-view"></div>
     </section>
 
-    <script src="angular/guildManager.js"></script>
+
     <script src="angular/controllers/CharController.js"></script>
+    <script src="angular/guildManager.js"></script>
   </body>
 </html>
