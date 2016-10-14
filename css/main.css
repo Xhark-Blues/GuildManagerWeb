@@ -81,7 +81,7 @@
     }
     .imgTitle {
       border: 1px solid #ffecb3;
-      background-color: ffecb3;
+      background-color: #ffecb3;
       color: #805715;
     }
     .imgTitle a{
@@ -156,7 +156,7 @@
       height: 100%;
       margin: 5px 5px 5px 10px;
       float:left;
-      background-color: 805415;
+      background-color: #805415;
     }
     aside h2 {
       background-color: #D4A96A;

@@ -9,11 +9,14 @@
     <link type="text/css" rel="stylesheet" href="css/main.css"/>
     <link type="text/css" rel="stylesheet" href="css/characters.css"/>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+
 
     <title>Characters</title>
   </head>
 
-  <body>
+  <body ng-app="characters">
     <header>
         <img src="imgs/logo.png">
         <h1>GUILD MANAGER WEB</h1>
@@ -44,18 +47,20 @@
         <ul>
           <li>
             <img width="40px" src="imgs/profesions/engineer.png">
-            <a href="characters/char1.html">Character 1.</a>
+            <a href="#char1">Character 1.</a>
           </li>
           <li>
             <img width="40px" src="imgs/profesions/thief.png">
-            <a href="characters/char2.html">Character 2.</a>
+            <a href="#char1">Character 2.</a>
           </li>
           <li>
             <img width="40px" src="imgs/profesions/warrior.png">
-            <a href="progress.html">Character 3.</a>
+            <a href="#char1">Character 3.</a>
           </li>
         </ul>
       </aside>
+
+      <div class="ng-view"></div>
     </section>
   </body>
 </html>
