@@ -11,14 +11,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
 
-    <script src="angular/guildManager.js"></script>
-    <script src="angular/controllers/CharController.js"></script>
-
     <title>Login</title>
     </head>
 
-  <body ng-app="characters">
-
+  <body>
 
     <a href="characterPanel.html">
       <img src="imgs/loginIMG.png">
@@ -28,14 +24,6 @@
       <a href="characterPanel.html">Sing in</a>
     </div>
     <p>09/10/2016</p>
-    <div ng-controller="CharController" >
-      <p ng-init="getChars()">{{ chars }}</p>
-      <p ng-init="getChar('Tinmark')">{{ char.profession }}</p>
-    </div>
-
-    <script src="angular/guildManager.js"></script>
-    <script src="angular/controllers/CharController.js"></script>
 
   </body>
-
 </html>
