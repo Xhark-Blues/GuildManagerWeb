@@ -18,4 +18,4 @@ function CharController($scope, $http, dao) {
 
 };
 
-CharController.$inject = ['$scope', '$http', dao];
+CharController.$inject = ['$scope', '$http', 'dao'];

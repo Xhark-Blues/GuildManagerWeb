@@ -19,4 +19,4 @@ function dao($http, $q){
   };
 };
 
-dao.$inject = ['$http', '$q'];
+dao.$inject = ['$http', '$q', '$rootScope'];

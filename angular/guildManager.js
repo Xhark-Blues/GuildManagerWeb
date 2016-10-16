@@ -2,7 +2,7 @@
 var app = angular.module("characters", ["ngRoute"]);
 
 app.service('dao', dao);
-app.controller('Charcontroller', CharController);
+app.controller('CharController', CharController);
 app.config(function($routeProvider) {
     $routeProvider.when("/char1", {
         templateUrl : "characters/charSummary.html",
