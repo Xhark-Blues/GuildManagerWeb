@@ -45,18 +45,20 @@
       <aside><!-- List of characters  (D)-->
         <h2 >Characters</h2>
         <ul >
-          <li ng-repeat="char in chars" >
-            <img  width="40px"  ng-src="imgs/profesions/{{ char.profession | lowercase }}.png">
-            <a href="#char1">{{ char.name }}</a>
+          <li class="menuitem" ng-repeat="char in chars" ng-click="selectChar($index)">
+            <img width="40px"  ng-src="imgs/profesions/{{ char.profession | lowercase }}.png" >
+            <a id="{{ char.name }}"  href="#char1">{{ char.name }}</a>
           </li>
         </ul>
       </aside>
 
-      <div class="content ng-view"></div>
+      <div ng-controller="CharController" class="content ng-view"></div>
     </section>
+
 
     <script src="angular/services/dao.js"></script>
     <script src="angular/controllers/CharController.js"></script>
     <script src="angular/guildManager.js"></script>
+
   </body>
 </html>

@@ -9,6 +9,8 @@ app.config(function($routeProvider) {
         controller : "CharController"
     });
 });
+
+
 /*.otherwise({
     templateUrl : "../characters/charSummary.html",
     controller : "CharController"
