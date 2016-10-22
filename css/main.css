@@ -135,17 +135,16 @@
     /*    Drop down menu*/
     .dropContent{
       display: none;
+      position:absolute;
       background-color: #D4A96A;
     }
 
-    .dropContent a{
+    .dropContent li{
       display: block;
     }
 
     .dropBtn:hover .dropContent{
       border: 1px solid  #553200;
-      display: block;
-      position:absolute;
     }
 
   /* Aside */
