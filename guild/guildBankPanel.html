@@ -9,6 +9,9 @@
     <link type="text/css" rel="stylesheet" href="../css/main.css"/>
     <link type="text/css" rel="stylesheet" href="../css/bank.css"/>
 
+    <script src="../jQuery/jquery-3.1.1.js"></script>
+    <script src="../jQuery/dropdown.js"></script>
+
     <title>Guild Bank</title>
   </head>
 
@@ -17,7 +20,7 @@
         <img src="../imgs/logo.png">
         <h1>GUILD MANAGER WEB</h1>
         <div class="iconCTN">
-          <div class="icons">            
+          <div class="icons">
               <a href="https://github.com/Xhark-Blues/GuildManagerWeb" target="_blank"><img src="../imgs/github.png"></a>
               <a href="https://www.guildwars2.com/es/" target="_blank"><img src="../imgs/gw2.png"></a>
           </div>
@@ -27,14 +30,15 @@
       <ul>
         <li><a href="../characterPanel.html">Characters</a></li>
         <li><a href="../achivementsPanel.html">Achivements</a></li>
-        <li class="dropBtn"><span>Guild</span>
-          <div class="actual dropContent">
-            <a href="../guild/guildMembersPanel.html">Guild1</a>
-            <a href="../guild/guildMembersPanel.html">Guild2</a>
-            <a href="../guild/guildMembersPanel.html">Guild3</a>
-          </div>
+        <li class="dropBtn"><a href="#">Guild</a>
+          <ul class="dropContent">
+            <li><a href="../guild/guildMembersPanel.html">Guild1</a></li>
+            <li><a href="../guild/guildMembersPanel.html">Guild2</a></li>
+            <li><a href="../guild/guildMembersPanel.html">Guild3</a></li>
+          </ul>
         </li>
       </ul>
+
       <ul><!-- Sub panels -->
         <li><a href="guildMembersPanel.html">Members</a></li>
         <li><a href="guildTeamsPanel.html">Teams</a></li>

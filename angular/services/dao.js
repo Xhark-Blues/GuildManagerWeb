@@ -2,6 +2,7 @@
 function dao($http, $q){
 
   var url = 'http://api.guildwars2.com/v2/characters';
+  var items ='http://api.guildwars2.com/v2/items';
   this.getCredentials = function() {
     return $http.get('json/credentials.json').then(function(response) {
       return $q.all(response.data);
@@ -16,12 +17,17 @@ function dao($http, $q){
   };
 
   this.getChars = function(KEY){
-    console.log(KEY);
     return $http.get(url+'?access_token='+KEY).then(function(response){
       return $q.all(response.data.map(function(x){
           return getCharsByName(x, KEY);
         }
       ));
+    });
+  };
+
+  this.getItemById = function(id){
+    return $http.get(items+'/'+id).then(function(response){
+        return $q.all(response.data);
     });
   };
 

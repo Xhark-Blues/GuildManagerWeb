@@ -16,6 +16,16 @@
 .tracking ul {
   margin: 5px;
 }
+.achvRes{
+  align-self: flex-start;
+}
+
+.tracking h2, .finder h2 {
+  margin:0px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  background-color: transparent;
+}
 .tracking ol li{
   margin-bottom: 5px;
 }
