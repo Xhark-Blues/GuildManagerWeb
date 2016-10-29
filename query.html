@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Gw, playercommunity, api access, gw2 api, guild wars, player, character, achievements, guild">
+    <meta name="description" content="Web service that allow the users to view and organize information about Guild Wars 2 in order to give them tools to improve their performance in end-game.">
+    <meta name="author" content="Martin Rubio">
+
+    <link type="text/css" rel="stylesheet" href="css/login.css"/>
+
+
+    <title>Login</title>
+    </head>
+
+  <body>
+
+    <form class="query">
+      <a class="exit" href="index.html">X</a>
+      <h2>ENCUESTA DE USUARIO:</h2>
+      <fieldset>
+        <legend>Guild Wars 2</legend>
+        <div class="textIn"><label class="labelSp">Gw2 ID:</label><input type="text" placeholder="User name" required="required"/></div>
+        <div class="textIn"><label class="labelSp">Server:</label>
+          <select>
+           <option value="baruch">Baruch Bay[ES]</option>
+           <option value="auguryk">Augury Rock[FR] </option>
+           <option value="drakkar">Drakkar Lake[GR]</option>
+           <option value="dzangonur">Dzagonur[GR]</option>
+           <option value="darkhaven">Darkhaven</option>
+         </select>
+         </div>
+        <div class="textIn"><label>Clase:</label>
+          <select>
+           <option value="ing">Ingeniero</option>
+           <option value="thief">ladron</option>
+           <option value="war">Guerrero</option>
+           <option value="guard">Guardian</option>
+           <option value="mes">Msmer</option>
+         </select>
+       </div>
+        <label for="race">Raza:</label>
+        <div class="raceRadios">
+          <div>
+            <label><input type="radio" name="race" value="char"> Char</label>
+            <label><input type="radio" name="race" value="human"> Humano</label>
+          </div>
+          <div>
+            <label><input type="radio" name="race" value="asura"> Asura</label>
+            <label><input type="radio" name="race" value="norn"> Norn</label>
+          </div>
+          <div>
+            <label><input type="radio" name="race" value="silvary"> Silvary</label>
+          </div>
+        </div>
+        <label for="gamemode">Modo de Juego:</label>
+        <div class="checks">
+          <label><input type="checkbox" name="gamemode" value="PvE"> PvE</label>
+          <label><input type="checkbox" name="gamemode" value="PvP"> PvP</label>
+          <label><input type="checkbox" name="gamemode" value="WvW"> WvW</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Guild Manager Web</legend>
+        <label>¿Como nos conociste?:
+          <select>
+           <option value="ingame">Por recomendaciones dentro de Guild Wars 2</option>
+           <option value="friend">Por recomendacion de un amigo</option>
+           <option value="forums">Por foros o boletines de portales webs</option>
+           <option value="google">Google u otros buscadores</option>
+           <option value="other">Otro</option>
+         </select>
+        </label>
+         <label for="gamemode">Frecuencia de uso:</label>
+         <div class="checks">
+           <label><input type="radio" name="periody" value="daily"> Diario</label>
+           <label><input type="radio" name="periody" value="3daily"> Cada tres dias</label>
+           <label><input type="radio" name="periody" value="wweekly"> Semanas</label>
+           <label><input type="radio" name="periody" value="monthly"> Mensual</label>
+           <label><input type="radio" name="periody" value="other"> Otro</label>
+         </div>
+         <label class="range">Usabilidad:<input type="range" min="0" max="100"></label>
+         <label>Comentarios y sugerencias:</label>
+         <textarea type="coments"></textarea>
+      </fieldset>
+      <div class="itemContent">
+        <input class="accept" type="submit" value="COMPLETAR"/>
+      </div>
+    </form>
+
+  </body>
+</html>

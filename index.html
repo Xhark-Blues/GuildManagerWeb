@@ -16,14 +16,17 @@
 
   <body>
 
-    <a href="characterPanel.html">
-      <img src="imgs/loginIMG.png">
-    </a>
-    <div class="buttons">
-      <a href="progress.html">Sing up</a>
-      <a href="characterPanel.html">Sing in</a>
-    </div>
-    <p>23/10/2016</p>
+    <form action="characterPanel.html">
+      <input type="text" placeholder="User name" required="required"/>
+      <input type="password" placeholder="********" required="required"/>
+      <div class="itemContent">
+        <a id="signup" href="signup.html">Sign up</a>
+        <input id="signin" type="submit" value="Sing in"/>
+      </div>
+
+      <p>23/10/2016</p>
+      <a href="query.html">Encuesta</a>
+    </form>
 
   </body>
 </html>
