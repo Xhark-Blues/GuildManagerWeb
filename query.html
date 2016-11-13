@@ -7,49 +7,49 @@
     <meta name="author" content="Martin Rubio">
 
     <link type="text/css" rel="stylesheet" href="css/login.css"/>
-
-
     <title>Login</title>
     </head>
 
   <body>
 
-    <form class="query">
+    <form class="query" method="post" action="Hellvlet">
       <a class="exit" href="index.html">X</a>
       <h2>ENCUESTA DE USUARIO:</h2>
       <fieldset>
         <legend>Guild Wars 2</legend>
-        <div class="textIn"><label class="labelSp">Gw2 ID:</label><input type="text" placeholder="User name" required="required"/></div>
+        <div class="textIn"><label class="labelSp">Gw2 ID:</label>
+          <input type="text" placeholder="User name" name="ID" required="required"/>
+        </div>
         <div class="textIn"><label class="labelSp">Server:</label>
-          <select>
-           <option value="baruch">Baruch Bay[ES]</option>
-           <option value="auguryk">Augury Rock[FR] </option>
-           <option value="drakkar">Drakkar Lake[GR]</option>
-           <option value="dzangonur">Dzagonur[GR]</option>
-           <option value="darkhaven">Darkhaven</option>
+          <select name="server">
+           <option value="Baruch Bay[ES]">Baruch Bay[ES]</option>
+           <option value="Augury Rock[FR]">Augury Rock[FR] </option>
+           <option value="Drakkar Lake[GR]">Drakkar Lake[GR]</option>
+           <option value="Dzagonur[GR]">Dzagonur[GR]</option>
+           <option value="Darkhaven">Darkhaven</option>
          </select>
          </div>
         <div class="textIn"><label>Clase:</label>
-          <select>
-           <option value="ing">Ingeniero</option>
-           <option value="thief">ladron</option>
-           <option value="war">Guerrero</option>
-           <option value="guard">Guardian</option>
-           <option value="mes">Msmer</option>
+          <select name="profession">
+           <option value="Ingeniero">Ingeniero</option>
+           <option value="Ladron">Ladron</option>
+           <option value="Guerrero">Guerrero</option>
+           <option value="Guardian">Guardian</option>
+           <option value="Msmer">Msmer</option>
          </select>
        </div>
         <label for="race">Raza:</label>
         <div class="raceRadios">
           <div>
-            <label><input type="radio" name="race" value="char"> Char</label>
-            <label><input type="radio" name="race" value="human"> Humano</label>
+            <label><input type="radio" name="race" value="Char"> Char</label>
+            <label><input type="radio" name="race" value="Humano"> Humano</label>
           </div>
           <div>
-            <label><input type="radio" name="race" value="asura"> Asura</label>
-            <label><input type="radio" name="race" value="norn"> Norn</label>
+            <label><input type="radio" name="race" value="Asura"> Asura</label>
+            <label><input type="radio" name="race" value="Norn"> Norn</label>
           </div>
           <div>
-            <label><input type="radio" name="race" value="silvary"> Silvary</label>
+            <label><input type="radio" name="race" value="Silvary"> Silvary</label>
           </div>
         </div>
         <label for="gamemode">Modo de Juego:</label>
@@ -62,7 +62,7 @@
       <fieldset>
         <legend>Guild Manager Web</legend>
         <label>¿Como nos conociste?:
-          <select>
+          <select name="known">
            <option value="ingame">Por recomendaciones dentro de Guild Wars 2</option>
            <option value="friend">Por recomendacion de un amigo</option>
            <option value="forums">Por foros o boletines de portales webs</option>
@@ -70,20 +70,20 @@
            <option value="other">Otro</option>
          </select>
         </label>
-         <label for="gamemode">Frecuencia de uso:</label>
+         <label for="periody">Frecuencia de uso:</label>
          <div class="checks">
-           <label><input type="radio" name="periody" value="daily"> Diario</label>
-           <label><input type="radio" name="periody" value="3daily"> Cada tres dias</label>
-           <label><input type="radio" name="periody" value="wweekly"> Semanas</label>
-           <label><input type="radio" name="periody" value="monthly"> Mensual</label>
-           <label><input type="radio" name="periody" value="other"> Otro</label>
+           <label><input type="radio" name="periody" value="Diario"> Diario</label>
+           <label><input type="radio" name="periody" value="Cada tres dias"> Cada tres dias</label>
+           <label><input type="radio" name="periody" value="Semanal"> Semanas</label>
+           <label><input type="radio" name="periody" value="Mensual"> Mensual</label>
+           <label><input type="radio" name="periody" value="Otro"> Otro</label>
          </div>
-         <label class="range">Usabilidad:<input type="range" min="0" max="100"></label>
+         <label class="range">Usabilidad:<input name="usability" type="range" min="0" max="100" step="1"></label>
          <label>Comentarios y sugerencias:</label>
          <textarea type="coments"></textarea>
       </fieldset>
       <div class="itemContent">
-        <input class="accept" type="submit" value="COMPLETAR"/>
+        <input class="accept" type="submit" value="COMPLETAR" name="comments"/>
       </div>
     </form>
 
