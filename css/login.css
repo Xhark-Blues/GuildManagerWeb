@@ -17,6 +17,16 @@ body {
   align-items: center;
   font-family: CronosPro,Arial,Helvetica,sans-serif;
 }
+li{
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+ul {
+  padding: 0px;
+  margin: 1px;
+  margin-left: 5px;
+}
 
 /*Form generico*/
   form {
@@ -29,6 +39,18 @@ body {
     margin-bottom: 50px;
     background: white;
   }
+
+  .results {
+    width: 400px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    border: 1px solid #bbb;
+    margin-bottom: 50px;
+    background: white;
+  }
+
   fieldset {
     width: 100%;
     align-self: center;
@@ -38,7 +60,15 @@ body {
   }
 
   h2 {
+    margin-top: 5px;
+    font-family: EasonProDisplayCaps,Times New Roman,serif;
+    color: rgb(182, 20, 16);
+
+  }
+
+  h3 {
     margin: 0px;
+    font-size: 18px;
     font-family: EasonProDisplayCaps,Times New Roman,serif;
     color: rgb(182, 20, 16);
 
@@ -199,4 +229,19 @@ textarea {
   border-radius: 2px;
   padding: 2px;
   font-family: EasonProDisplayCaps,Times New Roman,serif;
+}
+
+.regMSG {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer {
+  display: block;
+  text-align: right;
+  padding: 5px 25px;
+  border: 1px solid #bbb;
+  background: white;
 }

@@ -67,11 +67,15 @@
     <title>Sign Up</title>
   </head>
   <body>
-      <form name="signUp" method="post" onsubmit="return checkEqualPass()" action="complete.html">
+      <form name="signUp" method="post" onsubmit="return checkEqualPass()" action="Regvlet">
         <h2>Registrarse</h2>
         <p class="info"> Los campos marcados con un * son obligatorios</p>
+        <input name="DNI" placeholder="DNI*" pattern="[0-9]{8}[a-zA-Z]" type="text" required="required"/>
+        <input name="name" placeholder="Nombre*"  pattern="[A-Z][a-z]*( ([A-Z][a-z]*))*" type="text" required="required"/>
+        <input name="apellidos" placeholder="Apellidos*"  pattern="[A-Z][a-z]*( ([A-Z][a-z]*))*" type="text" required="required"/>
+
+
         <input name="email" placeholder="Correo electronico*" autocomplete="on" type="email" required="required"/>
-        <input name="name" placeholder="Nombre de usuario*"  type="text" required="required"/>
         <div id="psswordLevel"><div id="pl"></div><div id="pl2"></div><div id="pl3"></div></div>
         <input name="password" placeholder="Contraseña*" type="password" required="required" oninput="psswdChange(this)"/>
         <input name="rPassword" placeholder="Repite la contraseña*" type="password" required="required" oninput="checkEqualPass()"/>

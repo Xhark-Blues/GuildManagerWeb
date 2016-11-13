@@ -1,0 +1,28 @@
+<web-app>
+
+  <servlet>
+    <servlet-name>Hellvlet</servlet-name>
+    <servlet-class>Hellvlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Hellvlet</servlet-name>
+    <url-pattern>/Hellvlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Regvlet</servlet-name>
+    <servlet-class>Regvlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Regvlet</servlet-name>
+    <url-pattern>/Regvlet</url-pattern>
+  </servlet-mapping>
+
+  <context-param>
+    <param-name> webMaster </param-name>
+    <param-value> Martín Rubio Fernández</param-value>
+  </context-param>
+
+</web-app>
