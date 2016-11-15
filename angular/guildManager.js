@@ -5,7 +5,7 @@ app.service('dao', dao);
 app.controller('CharController', CharController);
 app.config(function($routeProvider) {
     $routeProvider.when("/char1", {
-        templateUrl : "characters/charSummary.html",
+        templateUrl : "../html/characters/charSummary.html",
         controller : "CharController"
     });
 });

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Gw, playercommunity, api access, gw2 api, guild wars, player, character, achievements, guild, registration">
+    <meta name="description" content="Sing up form">
+    <meta name="author" content="Martin Rubio">
+
+    <link type="text/css" rel="stylesheet" href="css/login.css"/>
+
+    <style>
+      #signup{
+        width: 95%;
+        align-self: center;
+      }
+    </style>
+    <script>
+        function psswdChange(paswdInput){
+          var max = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).*$", "g");
+          var med = new RegExp("^(?=.{7,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
+          var min = new RegExp("(?=.{6,}).*", "g");
+
+          var psswordLevel = document.getElementById('psswordLevel');
+          if (paswdInput.value != ""){
+            psswordLevel.style.display = 'flex';
+          }else {
+            psswordLevel.style.display = 'none';
+          }
+
+          var pl = document.getElementById('pl');
+          var pl2 = document.getElementById('pl2');
+          var pl3 = document.getElementById('pl3');
+
+          if (min.test(paswdInput.value)){
+            pl.style.display = 'flex';
+          }else{
+            pl.style.display = 'none';
+          }
+          if(med.test(paswdInput.value)){
+            pl2.style.display = 'flex';
+          }else{
+            pl2.style.display = 'none';
+          }
+          if(max.test(paswdInput.value)){
+            pl3.style.display = 'flex';
+          }else{
+            pl3.style.display = 'none';
+          }
+        }
+
+
+
+      function checkEqualPass(){
+          var psswd = document.forms[0]["password"];
+          var rPsswd = document.forms[0]["rPassword"];
+          rPsswd.style.border = "1px solid #b5b5b5"
+          if ( psswd.value !== rPsswd.value){
+              rPsswd.style.border = "1px solid red"
+              //alert(psswd.value+" "+rPsswd.value);
+              return false;
+          }
+      }
+
+      function nif(dni) {
+        var numero
+        var letr
+        var letra
+        var expresion_regular_dni
+
+        expresion_regular_dni = /^\d{8}[a-zA-Z]$/;
+
+        if(expresion_regular_dni.test (dni) == true){
+           numero = dni.substr(0,dni.length-1);
+           letr = dni.substr(dni.length-1,1);
+           numero = numero % 23;
+           letra='TRWAGMYFPDXBNJZSQVHLCKET';
+           letra=letra.substring(numero,numero+1);
+          if (letra!=letr.toUpperCase()) {
+             return false;
+           }else{
+             return true;
+           }
+        }else{
+           return false;
+         }
+      }
+
+    </script>
+
+    <title>Sign Up</title>
+  </head>
+  <body>
+      <form name="signUp" method="post" onsubmit="return checkEqualPass()" action="Regvlet">
+        <h2>Registrarse</h2>
+        <p class="info"> Los campos marcados con un * son obligatorios</p>
+        <input name="DNI" placeholder="DNI*" pattern="[0-9]{8}[a-zA-Z]" type="text" required="required"/>
+        <input name="name" placeholder="Nombre*"  pattern="[A-Z][a-z]*( ([A-Z][a-z]*))*" type="text" required="required"/>
+        <input name="apellidos" placeholder="Apellidos*"  pattern="[A-Z][a-z]*( ([A-Z][a-z]*))*" type="text" required="required"/>
+
+
+        <input name="email" placeholder="Correo electronico*" autocomplete="on" type="email" required="required"/>
+        <div id="psswordLevel"><div id="pl"></div><div id="pl2"></div><div id="pl3"></div></div>
+        <input name="password" placeholder="Contraseña*" type="password" required="required" oninput="psswdChange(this)"/>
+        <input name="rPassword" placeholder="Repite la contraseña*" type="password" required="required" oninput="checkEqualPass()"/>
+        <input name="apikey" placeholder="Api Key" type="text" pattern="[A-Z0-9]{8}(-[A-Z0-9]{4}){3}-[A-Z0-9]{20}(-[A-Z0-9]{4}){3}-[A-Z0-9]{12}"/>
+        <label><input name="subs" type="checkbox"/>Deseo subscrbrime al boletin de noticias</label>
+        <input id="signup" name="submit" type="submit" value="REGISTRARSE"/>
+        <p>Al hacer clic en "Registrarte" aceptas el <span>Contrato de usuario</span> y la <span>Política de privacidad</span> de GMW.</p>
+      </form>
+
+  </body>
+</html>

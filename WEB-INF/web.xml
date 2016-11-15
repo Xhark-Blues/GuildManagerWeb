@@ -2,7 +2,7 @@
 
   <servlet>
     <servlet-name>Hellvlet</servlet-name>
-    <servlet-class>Hellvlet</servlet-class>
+    <servlet-class>servlets.Hellvlet</servlet-class>
   </servlet>
 
   <servlet-mapping>
@@ -12,7 +12,7 @@
 
   <servlet>
     <servlet-name>Regvlet</servlet-name>
-    <servlet-class>Regvlet</servlet-class>
+    <servlet-class>servlets.Regvlet</servlet-class>
   </servlet>
 
   <servlet-mapping>
@@ -21,8 +21,8 @@
   </servlet-mapping>
 
   <context-param>
-    <param-name> webMaster </param-name>
-    <param-value> Martín Rubio Fernández</param-value>
+    <param-name>webMaster</param-name>
+    <param-value>Martín Rubio Fernández</param-value>
   </context-param>
 
 </web-app>
