@@ -23,10 +23,15 @@
       font-family: PT Sans, Helvetica, Tahoma;
 
     }
+    p {
+      margin: 0;
+      padding: 0;
+    }
     h1, h2, h3, h4, h5 {
-      margin: 0px;
+      margin: 0;
       font-family: GT Walsheim;
     }
+
     h2 {
       text-align: center;
       color: #ffdfaa;
@@ -46,12 +51,12 @@
     }
     li{
       list-style-type: none;
-      padding: 0px;
-      margin: 0px;
+      padding: 0;
+      margin: 0;
     }
     ul {
-      padding: 0px;
-      margin: 0px;
+      padding: 0;
+      margin: 0;
     }
     header {
       background-image: url("../imgs/leatherCtn.png");
@@ -60,7 +65,7 @@
       padding: 5px;
       display: inline-flex;
       justify-content:space-between;
-      margin: 20px 0px;
+      margin: 20px 0;
     }
     header h1 {
       margin: auto;
@@ -71,7 +76,7 @@
     }
     .main{
       width: 100%;
-      padding: 0px;
+      padding: 0;
       display: inline-flex;
       justify-content:space-between;
       flex-wrap: wrap;
@@ -160,19 +165,17 @@
     aside h2 {
       background-color: #D4A96A;
       text-align: center;
-      padding: 5px 0px;
+      padding: 5px 0;
     }
     aside li {
       border: 1px solid #ffecb3;
       white-space: nowrap;
       overflow: hidden;
     }
-    aside li a{
-
-    }
     aside li img{
       vertical-align: middle;
     }
+
     .content{
       border: 1px solid #ffecb3;
       width: 70%;
@@ -184,8 +187,141 @@
 
 
 
+
+
     .text{
       background-color: #333;
+      color: rgb(255,255,255);
       color: rgba(255,255,255,0.5);
     }
 
+    .storeForm {
+      width: 100%;
+    }
+
+    .store{
+      width: 100%;
+      display:flex;
+      flex-wrap: wrap;
+      flex-direction:row;
+      justify-content: space-between;
+    }
+    .product {
+      border: 1px solid pink;
+      height: 250px;
+      width:  22%;
+      padding: 5px;
+      margin: 5px;
+      background-color: white;
+
+      display: flex;
+      flex-direction: column;
+      font-family: EasonPro,"Times New Roman",serif;
+    }
+
+    .submitCart {
+      display: flex;
+      align-self: center;
+      align-content: center;
+      justify-content: center;
+    }
+
+    .selectedProduct {
+      border: 2px solid red;
+    }
+
+    .product img {
+      width: 100px;
+      height: 100px;
+      margin: 5px;
+      align-self: center;
+      border: 1px solid red;
+      color: black;
+    }
+
+
+    .price {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .price input[type=number]{
+      width: 50px;
+      height: 15px;
+      margin-top: 5px;
+    }
+
+    .bill {
+      width: 100%;
+      display:flex;
+      flex-direction:column;
+      background-color: white;
+      margin: 20px 50px;
+
+    }
+
+    .billRow, .billHead, .billBottom {
+      display:flex;
+      flex-direction:row;
+      justify-content: space-between;
+      padding: 0 25px;
+
+    }
+    .billButtons{
+      width: 100%;
+      padding: 15px 35px;
+      display:flex;
+      flex-direction:row;
+      justify-content: space-between;
+      align-items: center;
+
+    }
+    .billRow {
+      color: black;
+      margin-bottom: 5px;
+    }
+
+    .billHead {
+      color:red;
+      margin:5px 0;
+      border-bottom: 1px solid red;
+      font-size: 1.2em;
+    }
+
+    .billBottom{
+      color:black;
+      margin:5px 0;
+      border-top: 1px solid black;
+      font-size: 1.2em;
+    }
+
+    .billCell, .billHead span, .billBottom span{
+      width: 30%;
+      text-align: center;
+    }
+
+
+    .confirmation {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      text-align: center;
+      margin:50px;
+
+      background-color: #333;
+      color: rgb(255,255,255);
+      color: rgba(255,255,255,0.5);
+    }
+
+
+    .cartButon {
+      font: normal 28px/1.6 EasonPro,"Times New Roman",serif;
+      color: #FFF;
+      font-size: 22px;
+      background: linear-gradient(180deg, rgb(182, 20, 16) 0px, rgb(63, 7, 5));
+      font-family: EasonProDisplayCaps,Times New Roman,serif;
+    }

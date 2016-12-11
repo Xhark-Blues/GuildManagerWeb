@@ -20,6 +20,47 @@
     <url-pattern>/Regvlet</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>Main</servlet-name>
+    <servlet-class>servlets.Main</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Main</servlet-name>
+    <url-pattern>/Main</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Storvlet</servlet-name>
+    <servlet-class>servlets.Storvlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Storvlet</servlet-name>
+    <url-pattern>/Storvlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Billvlet</servlet-name>
+    <servlet-class>servlets.Billvlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Billvlet</servlet-name>
+    <url-pattern>/Billvlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Confvlet</servlet-name>
+    <servlet-class>servlets.Confvlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Confvlet</servlet-name>
+    <url-pattern>/Confvlet</url-pattern>
+  </servlet-mapping>
+
+
   <context-param>
     <param-name>webMaster</param-name>
     <param-value>Martín Rubio Fernández</param-value>
