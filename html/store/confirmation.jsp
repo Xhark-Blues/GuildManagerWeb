@@ -1,19 +1,6 @@
 <%@page contentType="text/html, charset=UTF-8"%>
 <%@page import="java.util.*, model.*"%>
 
-<%
-  final String USR="martinrubiofernandez";
-  final String PAS="etse";
-  DAO dao = null;
-  try{
-    dao = new DAO(USR, PAS);
-  }catch(Exception ex){}
-  Cart cart = (Cart)session.getAttribute("cart");
-
-  dao.insertSale(cart);
-  cart = null;
-  session.setAttribute("cart", cart);
- %>
 
   <html>
     <jsp:include page="../head.jsp"/>
@@ -32,16 +19,23 @@
             <h3> <a href="index.jsp"> Cerrar Sesion </a></h3>
           </div>
           <div>
-            <h3> Nombre: <%= ((User)session.getAttribute("log")).getName() %> </h3>
+            <h3> <a href="Cartvlet"> ${ log.getName()} </a> </h3>
           </div>
         </div>
     </header>
     <body>
       <section class="main">
         <div class="confirmation">
-          <p> Compra realizada con exito</p>
-          <a href="Storvlet"> Atras</a>
+          <h2> Compra realizada con exito</h2>
+          <form action="Billvlet" method="post">
+                <div class="dir"><label>Dirección de envio:</label><input type="text" name="sentAddress" width="200" placeholder="Direccion de envio" required="required"></div>
+                <div class="dir"><label>Dirección de facturación:</label><input type="text" name="billAddress" width="200"  placeholder="Direccion de facturacion"></div>
+            <div class="confButtons">
+              <a href="Cartvlet"> Atras </a>
+              <input class="cartButon" type="submit" value="Completar Compra" ></input>
+            </div>
+          </form>
         </div>
-        <section>
-      </body>
-    </html>
+      <section>
+    </body>
+  </html>

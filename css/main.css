@@ -27,6 +27,10 @@
       margin: 0;
       padding: 0;
     }
+    form {
+      margin: 0;
+    }
+
     h1, h2, h3, h4, h5 {
       margin: 0;
       font-family: GT Walsheim;
@@ -49,6 +53,19 @@
       color: #ffecb3;
       text-decoration: none;
     }
+
+    .linkButon {
+      background-color: transparent;
+      text-decoration: underline;
+      border: none;
+      color: ffecb3;
+      cursor: pointer;
+    }
+
+    linkButon:focus {
+      outline: none;
+    }
+
     li{
       list-style-type: none;
       padding: 0;
@@ -73,6 +90,11 @@
     .iconCTN {
       display: inline-flex;
       flex-direction: column-reverse;
+    }
+    .icons{
+      display: flex;
+      justify-content: flex-end;
+      margin: 10px 5px 5px 0;
     }
     .main{
       width: 100%;
@@ -262,7 +284,7 @@
 
     }
 
-    .billRow, .billHead, .billBottom {
+    .billRow, .billTableHead, .billBottom {
       display:flex;
       flex-direction:row;
       justify-content: space-between;
@@ -283,10 +305,11 @@
       margin-bottom: 5px;
     }
 
-    .billHead {
+    .billTableHead {
       color:red;
       margin:5px 0;
       border-bottom: 1px solid red;
+      border-top: 1px solid red;
       font-size: 1.2em;
     }
 
@@ -297,9 +320,23 @@
       font-size: 1.2em;
     }
 
-    .billCell, .billHead span, .billBottom span{
+    .billCell, .billTableHead span, .billBottom span{
       width: 30%;
       text-align: center;
+    }
+
+    .billHead{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 5px;
+    }
+
+    .clientData, .storeData {
+      width: calc(25% -4px);
+      padding: 2px;
+      border: 1px solid #D4A96A;
+      margin: 0 5px;
     }
 
 
@@ -324,4 +361,24 @@
       font-size: 22px;
       background: linear-gradient(180deg, rgb(182, 20, 16) 0px, rgb(63, 7, 5));
       font-family: EasonProDisplayCaps,Times New Roman,serif;
+    }
+
+    .dir {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 420px;
+    }
+
+    .confirmation form {
+      margin: 15px 0;
+    }
+
+    .confButtons{
+      width: 100%;
+      margin: 15px 0;
+      display:flex;
+      flex-direction:row;
+      justify-content: space-between;
+      align-items: center;
     }

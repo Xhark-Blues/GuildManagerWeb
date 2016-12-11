@@ -23,6 +23,7 @@ public class Cart {
         b = true;
         System.out.println("Linea duplicada");
         i = lines.indexOf(ln);
+        line.setCant(line.getCant()+ln.getCant());
       }
     }
     //Si la linea ya existe se suman las cantidades selecionadas
@@ -30,6 +31,24 @@ public class Cart {
       lines.get(i).setCant(line.getCant());
     }else{
       lines.add(line);
+    }
+  }
+
+  public void deleteLineOf(int ID){
+    Line todel = null;
+    for(Line ln: lines){
+      if( ln.getProduct().getId() == ID ){
+        todel = ln;
+      }
+    }
+    lines.remove(todel);
+  }
+
+  public void updateCantOf(int ID, int cant){
+    for(Line ln: lines){
+      if( ln.getProduct().getId() == ID ){
+        ln.setCant(cant);
+      }
     }
   }
 

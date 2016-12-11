@@ -1,17 +1,8 @@
 <%@page contentType="text/html, charset=UTF-8"%>
 <%@page import="java.util.*, model.*"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@page isELIgnored="false" %>
 
-<%
-  ArrayList<Product> products = (ArrayList<Product>)session.getAttribute("products");
-  Cart cart = (Cart)session.getAttribute("cart");
-  if( cart == null){
-    ArrayList<Line> lines = new ArrayList<Line>();
-    String userDNI = "35488513L";
-    cart = new Cart(lines, userDNI, Calendar.getInstance().getTime());
-
-    session.setAttribute("cart",cart);
-  }
- %>
 <html>
   <jsp:include page="../head.jsp"/>
 
@@ -24,13 +15,13 @@
           <a href="https://www.guildwars2.com/es/" target="_blank"><img src="imgs/gw2.png"></a>
         </div>
         <div>
-          <h3><h3><a href="Storvlet"> Store </a></h3></h3>
+          <h4><a href="Storvlet"> Store </a></h4>
         </div>
         <div>
-          <h3> <a href="index.jsp"> Cerrar Sesion </a></h3>
+          <h4> <a href="index.jsp"> Cerrar Sesion </a></h4>
         </div>
         <div>
-          <h3> Nombre: <%= ((User)session.getAttribute("log")).getName() %> </h3>
+          <h3> <a href="Cartvlet"> ${ log.getName()} </a> </h3>
         </div>
       </div>
 
@@ -38,25 +29,22 @@
 
   <body>
     <section class="main">
-      <form method="post" action="Billvlet" class="storeForm">
+      <form method="post" action="Cartvlet" class="storeForm">
         <div class="store">
-          <%
-          String pids = "";
-          for(Product p:products) {%>
-            <div class="product" onclick="selectProduct(this.id)">
-              <input type="hidden" name="pids" value="<%= p.getId()%>"></input>
-              <input type="hidden" name="names" value="<%= p.getName()%>"></input>
-              <input type="hidden" name="prices" value="<%= p.getPrice()%>"></input>
-              <img src="<%= p.getImgPath() %>"></img>
-              <p class="name"><%= p.getName() %> </p>
+
+          <c:forEach var="p" items="${products}">
+            <div class="product">
+              <input type="hidden" name="pids" value="${ p.getId() }"></input>
+              <input type="hidden" name="names" value="${ p.getName() }"></input>
+              <input type="hidden" name="prices" value="${ p.getPrice() }"></input>
+              <img src= "${p.getImgPath()}"></img>
+              <p class="name"> ${ p.getName() } </p>
               <div class="price">
-                <p> <%= p.getPrice() + "€"%>  </p>
-                <input type="number" name="cant"  value="<%= cart.getCantOf(p)%>" step="1" min="0" max="<%= p.getStock() %>"></input>
+                <p> ${ p.getPrice()}${"€"} </p>
+                <input type="number" name="cant"  value="0" step="1" min="0" max="${ p.getStock() - cart.getCantOf(p) }"></input>
               </div>
             </div>
-          <%
-          pids += p.getId();
-          } %>
+          </c:forEach>
         </div>
         <div class="submitCart">
           <input class="cartButon" type="submit" value="Añadir al carro" ></input>

@@ -1,16 +1,9 @@
 <%@page contentType="text/html, charset=UTF-8"%>
 <%@page import="java.util.*, model.*"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt"  prefix="fmt" %>
 
-<%
-  final String USR="martinrubiofernandez";
-  final String PAS="etse";
-  DAO dao = null;
-  try{
-    dao = new DAO(USR, PAS);
-  }catch(Exception ex){}
-  Cart cart = (Cart)session.getAttribute("cart");
 
- %>
 <html>
   <jsp:include page="../head.jsp"/>
 
@@ -29,7 +22,7 @@
           <h3> <a href="index.jsp"> Cerrar Sesion </a></h3>
         </div>
         <div>
-          <h3> Nombre: <%= ((User)session.getAttribute("log")).getName() %> </h3>
+          <h3> <a href="Cartvlet"> ${ log.getName() } </a> </h3>
         </div>
       </div>
 
@@ -39,49 +32,49 @@
     <section class="main">
         <div class="bill">
           <h2>Factura</h2>
-          <div class="billHead"><span>Producto</span><span>Precio </span><span>Unds.</span><span>Total</span><span>Total CON IVA</span></div>
+          <fmt:setLocale value="es_ES"/>
+          <c:set var="total" scope="page" value="${0.0}"/>
+          <div class="billHead">
+            <div class="clientData">
+              <h3>Cliente: ${ log.getName() } </h3>
+              <h3>NIF: ${ log.getDNI() } </h3>
+              <h4>Dirección de envio: ${ sentAddress }</h4>
+              <c:if test="empty billAddress">
+                <c:set var="billAddress" scope="page" value="${ sentAddress }"/>
+              </c:if>
+              <h4>Dirección de facturacion: ${ billAdress }</h4>
+            </div>
+            <div class="storeData">
+                <h3>GMW Store</h3>
+                <h4>CIF:  "B73347494"</h4>
+                <h4> Número de factura: ${ nSale } </h4>
+            </div>
+          </div>
+          <div class="billTableHead">
+            <span>Producto</span><span>Precio </span><span>Unds.</span><span>Total</span><span>Total CON IVA</span>
+          </div>
 
-            <%
+            <c:forEach var="ln" items="${cart.getLines()}">
+              <c:set var="cant" scope="page" value="${ln.getCant()}"/>
+              <c:set var="price" scope="page" value="${ln.getProduct().getPrice()}"/>
 
-            //Pedir carrito de la sesion:
-
-            String[] cants = request.getParameterValues("cant");
-            String[] pids = request.getParameterValues("pids");
-            String[] names = request.getParameterValues("names");
-            String[] prices = request.getParameterValues("prices");
-
-            Double total = 0.0;
-            for(int i=0;i< cants.length; i++){
-              int cant = Integer.parseInt(cants[i]);
-
-              Line line = new Line(dao.getProductById(Integer.parseInt(pids[i])), cant, 21);
-              cart.addLine(line);
-            }
-
-            session.setAttribute("cart",cart);
-
-            for(Line ln: cart.getLines()){
-              double price = ln.getProduct().getPrice();
-              int cant = ln.getCant();
-              if( cant > 0) {
-                total += price * cant;
-                %>
+              <c:if test="${ cant > 0}">
+                <c:set var="total" scope="page" value="${total + price * cant}"/>
                 <div class="billRow">
-                  <div class="billCell"><%= ln.getProduct().getName()%></div>
-                  <div class="billCell"><%= price %></div>
-                  <div class="billCell"><%= cant %></div>
-                  <div class="billCell"><%= price * cant %></div>
-                  <div class="billCell"><%= String.format("%.2f",(price*0.21+price)*cant) %></div>
+                    <div class="billCell">${ ln.getProduct().getName() } </div>
+                    <div class="billCell">${ price } </div>
+                    <div class="billCell">${ cant } </input></div>
+                    <div class="billCell"> <fmt:formatNumber value="${ price * cant }" type="currency"/> </div>
+                    <div class="billCell"> <fmt:formatNumber value="${ (price*0.21+price)*cant }" type="currency"/> </div>
                 </div>
-              <%}%>
-            <%
-            } %>
+              </c:if>
 
-            <div class="billBottom"><span>Total</span><span></span><span></span><span><%= String.format("%.2f",total) %></span><span><%= String.format("%.2f",total*0.21+total) %></span></div>
+            </c:forEach>
+
+          <div class="billBottom"><span>Total</span><span></span><span></span><span><fmt:formatNumber value="${ total }" type="currency"/> </span><span><fmt:formatNumber value="${ (total*0.21+total) }" type="currency"/></span></div>
         </div>
         <div class="billButtons">
-          <a href="Storvlet"> Store </a>
-          <a class="cartButon" href="Confvlet"> Confirmar compra</a>
+          <a href="Storvlet"> Volver a la tienda </a>
         </div>
     <section>
   </body>

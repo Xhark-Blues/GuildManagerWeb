@@ -41,13 +41,13 @@
   </servlet-mapping>
 
   <servlet>
-    <servlet-name>Billvlet</servlet-name>
-    <servlet-class>servlets.Billvlet</servlet-class>
+    <servlet-name>Cartvlet</servlet-name>
+    <servlet-class>servlets.Cartvlet</servlet-class>
   </servlet>
 
   <servlet-mapping>
-    <servlet-name>Billvlet</servlet-name>
-    <url-pattern>/Billvlet</url-pattern>
+    <servlet-name>Cartvlet</servlet-name>
+    <url-pattern>/Cartvlet</url-pattern>
   </servlet-mapping>
 
   <servlet>
@@ -58,6 +58,26 @@
   <servlet-mapping>
     <servlet-name>Confvlet</servlet-name>
     <url-pattern>/Confvlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Billvlet</servlet-name>
+    <servlet-class>servlets.Billvlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Billvlet</servlet-name>
+    <url-pattern>/Billvlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Delvlet</servlet-name>
+    <servlet-class>servlets.Delvlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Delvlet</servlet-name>
+    <url-pattern>/Delvlet</url-pattern>
   </servlet-mapping>
 
 

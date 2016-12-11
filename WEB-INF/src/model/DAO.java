@@ -181,10 +181,11 @@ public class DAO{
       System.out.println(ex);
     }
   }
-  public void insertSale(Cart cart){
+  public int insertSale(Cart cart){
     PreparedStatement statement = null;
+    int id_sale = -1;
     try{
-      int id_sale = getlastSaleID() + 1;
+      id_sale = getlastSaleID() + 1;
       String inserSale = "insert into sales VALUES ( ? , ?, DATE(NOW()))";
       statement = connection.prepareStatement(inserSale);
       statement.setInt(1, id_sale);
@@ -205,10 +206,12 @@ public class DAO{
         statement.executeUpdate();
 
         buyProduct(line.getProduct(), line.getCant());
+        return id_sale;
       }
     }catch(SQLException ex){
       System.out.println(ex);
     }
+    return id_sale;
   }
   public void close() throws SQLException{
     connection.close();

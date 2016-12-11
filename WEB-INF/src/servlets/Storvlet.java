@@ -16,6 +16,7 @@ import java.util.logging.Logger;
 import java.sql.SQLException;
 import java.util.*;
 import model.*;
+
 public class Storvlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     final String USR="martinrubiofernandez";
@@ -41,8 +42,16 @@ public class Storvlet extends HttpServlet {
         //String log = session.getAttribute("log").toString();
         try {
           ArrayList<Product> products = dao.getProducts();
-          System.out.println(session);
-          session.setAttribute("products",products);
+          Cart cart = (Cart)session.getAttribute("cart");
+          if( cart == null){
+            ArrayList<Line> lines = new ArrayList<Line>();
+            String userDNI = "35488513L";
+            cart = new Cart(lines, userDNI, Calendar.getInstance().getTime());
+            session.setAttribute("cart",cart);
+          }
+
+          request.setAttribute("products",products);
+          request.setAttribute("cart",cart);
           RequestDispatcher dispatcher = request.getRequestDispatcher("html/store/store.jsp");
           dispatcher.forward(request,response);
         }catch(SQLException ex){
